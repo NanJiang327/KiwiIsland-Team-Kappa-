@@ -80,6 +80,7 @@ private boolean valid;
 	                public void run(){
 	                    try{
 	                        player.play();
+	                   
 	                    }catch(Exception e){
 	                        JOptionPane.showMessageDialog(null, "Error playing mp3 file");
 	                        valid = false;
@@ -87,23 +88,7 @@ private boolean valid;
 	                }
 	            }
 	    ).start();
-	    new Thread(
-	    	new Runnable() {
-				public void run() {
-					try{
-						System.out.println("-------");
-						if(path.available()==0){
-							player.play();
-							System.out.println("Play agin");
-						}	
-					}catch (Exception e) {
-						JOptionPane.showMessageDialog(null, "Error playing mp3 file");
-                        valid = false;
-					}
-					
-				}
-			}		
-	    	).start();
+	 
 	    }catch(Exception e){
 	        JOptionPane.showMessageDialog(null, "Error playing mp3 file");
 	        valid = false;
