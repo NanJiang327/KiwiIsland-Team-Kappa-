@@ -27,7 +27,7 @@ public class LostRestartExit extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         // this.pack();
-        this.setSize(620, 380);
+        this.setSize(490, 380);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setVisible(true);
@@ -116,7 +116,7 @@ public class LostRestartExit extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background/End_Screen.jpg"))); // NOI18N
         jLabel2.setToolTipText("");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 505, 390);
+        jLabel2.setBounds(0, 0, 490, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
