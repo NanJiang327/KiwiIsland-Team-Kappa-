@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Eclipse ###
 
 .metadata
@@ -58,6 +59,8 @@ local.properties
 .classpath
 
 ### Java ###
+=======
+>>>>>>> 4579b5e3c75084d6df0fbbfd77b6e2332578897a
 # Compiled class file
 *.class
 
@@ -80,6 +83,7 @@ local.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 
 ### NetBeans ###
 nbproject/private/
@@ -90,3 +94,5 @@ nbdist/
 .nb-gradle/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+=======
+>>>>>>> 4579b5e3c75084d6df0fbbfd77b6e2332578897a
