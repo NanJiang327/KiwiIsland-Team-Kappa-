@@ -2,7 +2,6 @@ package nz.ac.aut.ense701.userinfo;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,6 +27,7 @@ public class Userinfo {
 	        	break;
 	        }
 	    }	
+	    br.close();
 	}
 	
 	public void insertToFile(String username,String pwd) throws IOException{
@@ -62,7 +62,8 @@ public class Userinfo {
 		            	verified = false;
 		            }
 		        }
-		    }		
+		    }	
+		    br.close();
 	}
 
 	public boolean isFound() {

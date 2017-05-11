@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.awt.event.*;
 import javax.swing.JPanel;
+
+import javazoom.jl.decoder.JavaLayerException;
 import nz.ac.aut.ense701.gameModel.Game;
 import nz.ac.aut.ense701.gameModel.GameEventListener;
 import nz.ac.aut.ense701.gameModel.GameState;
@@ -78,6 +80,7 @@ public class KiwiCountUI
         }
 
     }
+<<<<<<< HEAD
 
     private void openLossPage(Game g) {
         final LostRestartExit gui = new LostRestartExit(g);
@@ -141,6 +144,69 @@ public class KiwiCountUI
             }
         });
         setVisible(true);
+=======
+    
+     private void setAsGameListener()
+    {
+       game.addGameEventListener(this); 
+       //Add key listener to control the movement.
+       this.addKeyListener(new KeyListener()
+       {
+
+       public void keyPressed(KeyEvent e) 
+       {  
+              switch(e.getKeyCode())  
+              {  
+                  case KeyEvent.VK_UP:  
+                  	game.playerMove(MoveDirection.NORTH);
+                      break;  
+                  case KeyEvent.VK_DOWN:  
+                  	game.playerMove(MoveDirection.SOUTH);
+                      break;  
+                  case KeyEvent.VK_LEFT:  
+                  	game.playerMove(MoveDirection.WEST); 
+                      break;  
+                  case KeyEvent.VK_RIGHT:  
+                  	game.playerMove(MoveDirection.EAST);
+                      break;  
+                  case KeyEvent.VK_F1:
+                	  //call next song and set i = 0 in case the user call last song when background music is paused
+                	  game.lastSong();
+                	  i=0;
+                	  break;
+                  case KeyEvent.VK_F2:
+                	//if i=0 then the music should be paused when user pressed F2 key
+                	  if(i==0){
+						game.pause();
+						 i=1;
+                	  }else{
+                      	//if i=1 then the music should be paused when user pressed F2 key
+						game.resume();
+                		i=0;
+                	  }	  
+                	  break;
+                  case KeyEvent.VK_F3:
+                	  //call next song and set i = 0 in case the user call next song when background music is paused
+                	  game.nextSong();
+                	  i=0;
+                	  break;
+              }  
+                
+          }  
+          
+          @Override
+      	public void keyReleased(KeyEvent e) {
+      		// TODO Auto-generated method stub
+      		
+      	}
+
+      	@Override
+      	public void keyTyped(KeyEvent e) {
+      		// TODO Auto-generated method stub
+      	}	
+       });
+       setVisible(true);
+>>>>>>> feature/instruction-panel
 
     }
 

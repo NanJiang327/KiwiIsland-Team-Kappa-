@@ -58,6 +58,7 @@ public class StartPage {
 	    	// create the game object
 	    	 //startFrame.dispose();
 	         final Game game = new Game(username,gameBgm);
+	         startFrame.dispose();
 	         // create the GUI for the game
 	         final KiwiCountUI  gui  = new KiwiCountUI(game);
 	         gui.requestFocus();
