@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/java,eclipse,netbeans
 
@@ -67,6 +68,8 @@ local.properties
 ### Java ###
 =======
 >>>>>>> origin/development
+=======
+>>>>>>> ShanonSelectCharacter
 # Compiled class file
 *.class
 
@@ -90,6 +93,7 @@ local.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ### NetBeans ###
 nbproject/private/
@@ -106,3 +110,11 @@ hs_err_pid*
 >>>>>>> feature/instruction-panel
 =======
 >>>>>>> origin/development
+=======
+
+## Ignore Build + IDE folders
+./build/*
+./build
+./idea
+./idea/*
+>>>>>>> ShanonSelectCharacter

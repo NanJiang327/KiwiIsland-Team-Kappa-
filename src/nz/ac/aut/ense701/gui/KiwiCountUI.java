@@ -80,8 +80,6 @@ public class KiwiCountUI
         }
 
     }
-<<<<<<< HEAD
-
     private void openLossPage(Game g) {
         final LostRestartExit gui = new LostRestartExit(g);
         gui.requestFocus();
@@ -93,58 +91,6 @@ public class KiwiCountUI
             }
         });
     }
-
-    private void setAsGameListener() {
-        game.addGameEventListener(this);
-        //Add key listener to control the movement.
-        this.addKeyListener(new KeyListener() {
-
-            public void keyPressed(KeyEvent e) {
-                switch (e.getKeyCode()) {
-                    case KeyEvent.VK_UP:
-                        game.playerMove(MoveDirection.NORTH);
-                        break;
-                    case KeyEvent.VK_DOWN:
-                        game.playerMove(MoveDirection.SOUTH);
-                        break;
-                    case KeyEvent.VK_LEFT:
-                        game.playerMove(MoveDirection.WEST);
-                        break;
-                    case KeyEvent.VK_RIGHT:
-                        game.playerMove(MoveDirection.EAST);
-                        break;
-                    case KeyEvent.VK_F1:
-                        game.lastSong();
-                        break;
-                    case KeyEvent.VK_F2:
-                        if (i == 0) {
-                            game.getAudio1().stop();
-                            i = 1;
-                        } else {
-                            game.getAudio1().loop();;
-                            i = 0;
-                        }
-                        break;
-                    case KeyEvent.VK_F3:
-                        game.nextSong();
-                        break;
-                }
-
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void keyTyped(KeyEvent e) {
-                // TODO Auto-generated method stub
-            }
-        });
-        setVisible(true);
-=======
     
      private void setAsGameListener()
     {
@@ -206,7 +152,7 @@ public class KiwiCountUI
       	}	
        });
        setVisible(true);
->>>>>>> feature/instruction-panel
+
 
     }
 
