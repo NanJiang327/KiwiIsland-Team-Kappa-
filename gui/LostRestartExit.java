@@ -27,7 +27,7 @@ public class LostRestartExit extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         // this.pack();
-        this.setSize(490, 380);
+        this.setSize(505, 380);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setVisible(true);
@@ -40,16 +40,16 @@ public class LostRestartExit extends javax.swing.JFrame {
     private void writeMessage() {
         if (GameState == GameState.LOST) {
 
-            dispMsg.setText(game.getPlayerName() + " " + game.getLoseMessage());
-            dispMsg.setForeground(new java.awt.Color(0, 0, 0));
-            dispMsg.setFont(new java.awt.Font("Tandysoft", 1, 12));
-            dispMsg.setOpaque(false);
+            displayMessage.setText(game.getPlayerName() + " " + game.getLoseMessage());
+            displayMessage.setForeground(new java.awt.Color(0, 0, 0));
+            displayMessage.setFont(new java.awt.Font("serif", 1, 12));
+            displayMessage.setOpaque(false);
 
         } else if (GameState == GameState.WON) {
-            dispMsg.setText(game.getPlayerName() + " " + game.getWinMessage());
-            dispMsg.setForeground(new java.awt.Color(0, 0, 0));
-            dispMsg.setFont(new java.awt.Font("Tandysoft", 1, 12));
-            dispMsg.setOpaque(false);
+            displayMessage.setText(game.getPlayerName() + " " + game.getWinMessage());
+            displayMessage.setForeground(new java.awt.Color(0, 0, 0));
+            displayMessage.setFont(new java.awt.Font("serif", 1, 12));
+            displayMessage.setOpaque(false);
         }
     }
 
@@ -66,9 +66,9 @@ public class LostRestartExit extends javax.swing.JFrame {
         MainPageButton = new javax.swing.JButton();
         RestartButton = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
-        dispMsg = new javax.swing.JLabel();
+        displayMessage = new javax.swing.JLabel();
         NewGame = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -82,7 +82,7 @@ public class LostRestartExit extends javax.swing.JFrame {
             }
         });
         getContentPane().add(MainPageButton);
-        MainPageButton.setBounds(120, 160, 223, 46);
+        MainPageButton.setBounds(140, 140, 223, 46);
 
         RestartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon/Restart.png"))); // NOI18N
         RestartButton.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class LostRestartExit extends javax.swing.JFrame {
             }
         });
         getContentPane().add(RestartButton);
-        RestartButton.setBounds(120, 210, 220, 37);
+        RestartButton.setBounds(140, 190, 220, 37);
 
         Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon/New Exit.png"))); // NOI18N
         Exit.addActionListener(new java.awt.event.ActionListener() {
@@ -100,9 +100,9 @@ public class LostRestartExit extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Exit);
-        Exit.setBounds(120, 290, 220, 38);
-        getContentPane().add(dispMsg);
-        dispMsg.setBounds(20, 100, 417, 54);
+        Exit.setBounds(140, 270, 220, 38);
+        getContentPane().add(displayMessage);
+        displayMessage.setBounds(50, 80, 410, 54);
 
         NewGame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon/New Game.png"))); // NOI18N
         NewGame.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +111,11 @@ public class LostRestartExit extends javax.swing.JFrame {
             }
         });
         getContentPane().add(NewGame);
-        NewGame.setBounds(120, 250, 220, 41);
+        NewGame.setBounds(140, 230, 220, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background/End_Screen.jpg"))); // NOI18N
-        jLabel2.setToolTipText("");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 505, 390);
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background/End_Screen.jpg"))); // NOI18N
+        getContentPane().add(background);
+        background.setBounds(0, 0, 510, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -170,8 +169,8 @@ public class LostRestartExit extends javax.swing.JFrame {
     private javax.swing.JButton MainPageButton;
     private javax.swing.JButton NewGame;
     private javax.swing.JButton RestartButton;
-    private javax.swing.JLabel dispMsg;
+    private javax.swing.JLabel background;
+    private javax.swing.JLabel displayMessage;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
