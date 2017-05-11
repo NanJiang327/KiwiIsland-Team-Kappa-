@@ -1,4 +1,9 @@
-# Compiled class file
+<<<<<<< HEAD
+
+# Created by https://www.gitignore.io/api/java,eclipse,netbeans
+
+=======
+>>>>>>> feature/instruction-panel
 ### Eclipse ###
 
 .metadata
@@ -88,6 +93,10 @@ build/
 nbbuild/
 dist/
 nbdist/
+<<<<<<< HEAD
+.nb-gradle/
+=======
 .nb-gradle/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+>>>>>>> feature/instruction-panel
