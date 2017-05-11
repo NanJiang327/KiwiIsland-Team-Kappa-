@@ -46,6 +46,9 @@ public class Game
         createNewGame();
     }
     
+    public String getGameCharacter(){
+       return this.gameCharacter;
+    }
     
     /**
      * Starts a new game.
@@ -70,7 +73,7 @@ public class Game
 		this.songNo = songNo;
 		mplayer = new MusicPlayer();
 		mplayer.setPath(getClass().getResourceAsStream("/Bgm/" + songNo + ".mp3"));
-		mplayer.play(2742026);
+		mplayer.play(-1);
 	}
 
 	public void pause() {

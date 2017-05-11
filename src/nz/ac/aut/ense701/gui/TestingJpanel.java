@@ -5,6 +5,8 @@
  */
 package nz.ac.aut.ense701.gui;
 
+import sun.net.TelnetOutputStream;
+
 /**
  *
  * @author shanon
@@ -42,4 +44,7 @@ public class TestingJpanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+    public static void main(String[] args){
+    	new TestingJpanel();
+	}
 }
